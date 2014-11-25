@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1416918040 source:/home/rossoner40/workspace/Algorithms/Sum/Calculate sin/main.cpp
+	<iostream>
+	<cmath>
+
