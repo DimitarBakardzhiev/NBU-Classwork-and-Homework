@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1418127923 source:/home/rossoner40/workspace/NBU-Classwork-and-Homework/Introduction to Programming and Algorithms/9.12.2014/Problem 02 - Parsing/main.cpp
+	<iostream>
+	<cstring>
+	<cmath>
+
