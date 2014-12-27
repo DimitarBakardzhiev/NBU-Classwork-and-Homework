@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1419651321 source:/home/rossoner40/workspace/NBU-Classwork-and-Homework/Introduction to Programming and Algorithms/9.12.2014/Problem 03 - Soundex/main.cpp
+	<iostream>
+	<cstring>
+
