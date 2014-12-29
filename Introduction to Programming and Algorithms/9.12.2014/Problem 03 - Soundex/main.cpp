@@ -66,9 +66,9 @@ void fillWithZeroes(char* soundexCode)
 
 char* soundex(char* name)
 {
-    //toUpperCase(name);
+    toUpperCase(name);
 
-    char result[5] = { '\0' };
+    char* result = new char[5] { '\0' };
     char lastConsonant = '\0';
     for (int i = 0, j = 0; name[i] != '\0'; i++)
     {
@@ -105,12 +105,12 @@ char* soundex(char* name)
 
 int main()
 {
-    char code[5];
-    strcpy(code, soundex("ROBERT"));
+    char* code = soundex("ROBERT");
     for (int i = 0; i < 4; i++)
     {
         cout << code[i];
     }
 
+    cout << endl;
     return 0;
 }
