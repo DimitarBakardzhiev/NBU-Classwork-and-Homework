@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1419978538 source:/home/rossoner40/workspace/NBU-Classwork-and-Homework/Introduction to Programming and Algorithms/23.12.2014/DichotomyMethod/main.cpp
+	<iostream>
+	<cmath>
+
