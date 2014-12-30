@@ -6,7 +6,12 @@ using namespace std;
 bool isVowel(char character)
 {
     return character == 'A' || character == 'E' || character == 'I' || character == 'O'
-        || character == 'U' || character == 'H' || character == 'W' || character == 'Y';
+        || character == 'U' || character == 'Y';
+}
+
+bool isHorW(char character)
+{
+    return character == 'H' || character == 'W';
 }
 
 int consonantToCode(char consonant)
@@ -85,7 +90,7 @@ char* soundex(char* name)
         }
         else
         {
-            if (name[i] == lastConsonant || isVowel(name[i])
+            if (name[i] == lastConsonant || isVowel(name[i]) || isHorW(name[i])
                 || (consonantToCode(name[i]) == consonantToCode(lastConsonant) && vowelBetweenConsonants == false))
             {
                 if (isVowel(name[i]))
@@ -117,7 +122,7 @@ char* soundex(char* name)
 
 int main()
 {
-    char* code = soundex("Tymczak");
+    char* code = soundex("Pfister");
     for (int i = 0; i < 4; i++)
     {
         cout << code[i];
