@@ -40,17 +40,21 @@ int consonantToCode(char consonant)
     }
 }
 
-void toUpperCase(char* text)
+char* toUpperCase(char* text)
 {
+    char* result = new char[strlen(text) + 1];
     for (int i = 0; text[i] != '\0'; i++)
     {
         int asciiCode = (int)text[i];
         if (asciiCode >= 97 && asciiCode <= 122)
         {
-            int upperCharCode = asciiCode - 32;
-            text[i] = (char)upperCharCode;
+            asciiCode = asciiCode - 32;
         }
+
+        result[i] = (char)asciiCode;
     }
+
+    return result;
 }
 
 void fillWithZeroes(char* soundexCode)
@@ -66,7 +70,7 @@ void fillWithZeroes(char* soundexCode)
 
 char* soundex(char* name)
 {
-    toUpperCase(name);
+    name = toUpperCase(name);
 
     char* result = new char[5] { '\0' };
     char lastConsonant = '\0';
@@ -91,7 +95,7 @@ char* soundex(char* name)
             else
             {
                 int code = consonantToCode(name[i]);
-                result[j] = (char)(code + '\0');
+                result[j] = (char)(code + 48);
                 j++;
                 lastConsonant = name[i];
             }
@@ -105,7 +109,7 @@ char* soundex(char* name)
 
 int main()
 {
-    char* code = soundex("ROBERT");
+    char* code = soundex("robert");
     for (int i = 0; i < 4; i++)
     {
         cout << code[i];
