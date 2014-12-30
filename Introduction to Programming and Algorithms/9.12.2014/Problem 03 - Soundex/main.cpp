@@ -74,6 +74,7 @@ char* soundex(char* name)
 
     char* result = new char[5] { '\0' };
     char lastConsonant = '\0';
+    bool vowelBetweenConsonants = false;
     for (int i = 0, j = 0; name[i] != '\0'; i++)
     {
         if (i == 0)
@@ -84,8 +85,14 @@ char* soundex(char* name)
         }
         else
         {
-            if (name[i] == lastConsonant || isVowel(name[i]))
+            if (name[i] == lastConsonant || isVowel(name[i])
+                || (consonantToCode(name[i]) == consonantToCode(lastConsonant) && vowelBetweenConsonants == false))
             {
+                if (isVowel(name[i]))
+                {
+                    vowelBetweenConsonants = true;
+                }
+
                 continue;
             }
             else if (j > 3)
@@ -98,6 +105,7 @@ char* soundex(char* name)
                 result[j] = (char)(code + 48);
                 j++;
                 lastConsonant = name[i];
+                vowelBetweenConsonants = false;
             }
         }
     }
@@ -109,7 +117,7 @@ char* soundex(char* name)
 
 int main()
 {
-    char* code = soundex("robert");
+    char* code = soundex("Tymczak");
     for (int i = 0; i < 4; i++)
     {
         cout << code[i];
