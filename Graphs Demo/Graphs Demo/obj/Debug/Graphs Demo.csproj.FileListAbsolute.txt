@@ -1,6 +1,0 @@
-c:\users\dimitar\documents\visual studio 2013\Projects\Graphs Demo\Graphs Demo\bin\Debug\Graphs Demo.exe.config
-c:\users\dimitar\documents\visual studio 2013\Projects\Graphs Demo\Graphs Demo\obj\Debug\Graphs Demo.csprojResolveAssemblyReference.cache
-c:\users\dimitar\documents\visual studio 2013\Projects\Graphs Demo\Graphs Demo\bin\Debug\Graphs Demo.exe
-c:\users\dimitar\documents\visual studio 2013\Projects\Graphs Demo\Graphs Demo\bin\Debug\Graphs Demo.pdb
-c:\users\dimitar\documents\visual studio 2013\Projects\Graphs Demo\Graphs Demo\obj\Debug\Graphs Demo.exe
-c:\users\dimitar\documents\visual studio 2013\Projects\Graphs Demo\Graphs Demo\obj\Debug\Graphs Demo.pdb
