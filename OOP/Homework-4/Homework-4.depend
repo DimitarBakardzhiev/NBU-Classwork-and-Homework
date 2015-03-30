@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1427225867 source:/home/rossoner40/workspace/OOP/Homework-4/main.cpp
+	<iostream>
+	<Employee.h>
+
+1427225803 source:/home/rossoner40/workspace/OOP/Homework-4/src/Employee.cpp
+	"Employee.h"
+	<iostream>
+	<stdexcept>
+
+1427225745 /home/rossoner40/workspace/OOP/Homework-4/include/Employee.h
+	<string>
+
+1427225900 source:/home/rossoner40/workspace/OOP/Homework-4/src/Manager.cpp
+	"Manager.h"
+
+1427226010 /home/rossoner40/workspace/OOP/Homework-4/include/Manager.h
+	<Employee.h>
+

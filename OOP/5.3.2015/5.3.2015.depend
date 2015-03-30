@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1426213462 source:/home/rossoner40/workspace/OOP/5.3.2015/main.cpp
+	<iostream>
+	<RegTasks.h>
+	<stdlib.h>
+	<cstring>
+	"List.h"
+
+1426213502 source:/home/rossoner40/workspace/OOP/5.3.2015/src/RegTasks.cpp
+	"RegTasks.h"
+	<cstring>
+	"List.h"
+
+1426213450 /home/rossoner40/workspace/OOP/5.3.2015/include/RegTasks.h
+	"List.h"
+
+1426213262 source:/home/rossoner40/workspace/OOP/5.3.2015/src/List.cpp
+	"List.h"
+	<iostream>
+
+1426212692 /home/rossoner40/workspace/OOP/5.3.2015/include/List.h
+

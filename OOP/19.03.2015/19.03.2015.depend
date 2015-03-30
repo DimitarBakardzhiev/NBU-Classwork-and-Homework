@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1426982962 source:/home/rossoner40/workspace/OOP/19.03.2015/main.cpp
+	<iostream>
+	<Set.h>
+
+1426983353 source:/home/rossoner40/workspace/OOP/19.03.2015/src/Set.cpp
+	"Set.h"
+
+1426983001 /home/rossoner40/workspace/OOP/19.03.2015/include/Set.h
+	<MultiSet.h>
+	<iostream>
+
+1426765865 source:/home/rossoner40/workspace/OOP/19.03.2015/src/MultiSet.cpp
+	"MultiSet.h"
+
+1426981568 /home/rossoner40/workspace/OOP/19.03.2015/include/MultiSet.h
+	<iostream>
+

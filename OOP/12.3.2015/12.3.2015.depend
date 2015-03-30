@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1426161308 source:/home/rossoner40/workspace/OOP/12.3.2015/main.cpp
+	<iostream>
+	<BigInteger.h>
+
+1427036717 source:/home/rossoner40/workspace/OOP/12.3.2015/src/BigInteger.cpp
+	"BigInteger.h"
+	<string>
+
+1426161773 /home/rossoner40/workspace/OOP/12.3.2015/include/BigInteger.h
+	<iostream>
+	<string>
+

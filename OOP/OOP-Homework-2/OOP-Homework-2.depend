@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1425865460 source:/home/rossoner40/workspace/OOP/OOP-Homework-2/main.cpp
+	<iostream>
+	<Money.h>
+
+1425865538 source:/home/rossoner40/workspace/OOP/OOP-Homework-2/src/Money.cpp
+	"Money.h"
+
+1425862292 /home/rossoner40/workspace/OOP/OOP-Homework-2/include/Money.h
+	<iostream>
+

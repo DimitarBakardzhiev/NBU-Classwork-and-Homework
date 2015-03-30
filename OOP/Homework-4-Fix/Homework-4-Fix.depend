@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1427228553 source:/home/rossoner40/workspace/OOP/Homework-4-Fix/main.cpp
+	<iostream>
+	<Employee.h>
+	<Manager.h>
+	<Executive.h>
+
+1427226683 source:/home/rossoner40/workspace/OOP/Homework-4-Fix/src/Employee.cpp
+	"Employee.h"
+	<iostream>
+	<stdexcept>
+
+1427226658 /home/rossoner40/workspace/OOP/Homework-4-Fix/include/Employee.h
+	<string>
+
+1427226831 source:/home/rossoner40/workspace/OOP/Homework-4-Fix/src/Manager.cpp
+	"Manager.h"
+	<iostream>
+	<stdexcept>
+
+1427226783 /home/rossoner40/workspace/OOP/Homework-4-Fix/include/Manager.h
+	<Employee.h>
+
+1427228195 source:/home/rossoner40/workspace/OOP/Homework-4-Fix/src/Executive.cpp
+	"Executive.h"
+	<iostream>
+
+1427227927 /home/rossoner40/workspace/OOP/Homework-4-Fix/include/Executive.h
+	<Manager.h>
+

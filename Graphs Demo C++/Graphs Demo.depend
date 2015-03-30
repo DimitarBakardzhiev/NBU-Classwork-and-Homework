@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1426430622 source:/home/rossoner40/workspace/Graphs Demo/main.cpp
+	<iostream>
+	<Node.h>
+	<Graph.h>
+
+1426427437 source:/home/rossoner40/workspace/Graphs Demo/src/Edge.cpp
+	"Edge.h"
+
+1426427376 /home/rossoner40/workspace/Graphs Demo/include/Edge.h
+
+1426430326 source:/home/rossoner40/workspace/Graphs Demo/src/Node.cpp
+	"Node.h"
+	<Edge.h>
+	<algorithm>
+	<iostream>
+
+1426427520 /home/rossoner40/workspace/Graphs Demo/include/Node.h
+	<string>
+	<list>
+	<Edge.h>
+
+1426430635 source:/home/rossoner40/workspace/Graphs Demo/src/Graph.cpp
+	"Graph.h"
+	<iostream>
+	<algorithm>
+
+1426428096 /home/rossoner40/workspace/Graphs Demo/include/Graph.h
+	<map>
+	<Node.h>
+

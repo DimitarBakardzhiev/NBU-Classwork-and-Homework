@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1426689015 source:/home/ubuntu/Desktop/Homework-3/main.cpp
+	<iostream>
+
+1426778411 source:/home/rossoner40/workspace/OOP/Homework-3/main.cpp
+	<iostream>
+	<Employee.h>
+	<Programmer.h>
+
+1426778460 source:/home/rossoner40/workspace/OOP/Homework-3/src/Employee.cpp
+	"Employee.h"
+	<iostream>
+	<stdexcept>
+
+1426778032 /home/rossoner40/workspace/OOP/Homework-3/include/Employee.h
+	<string>
+
+1426777884 source:/home/rossoner40/workspace/OOP/Homework-3/src/Programmer.cpp
+	"Programmer.h"
+
+1426777862 /home/rossoner40/workspace/OOP/Homework-3/include/Programmer.h
+	<Employee.h>
+
