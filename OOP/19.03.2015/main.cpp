@@ -1,23 +1,24 @@
 #include <iostream>
 #include <Set.h>
+#include <SortedSet.h>
 
 using namespace std;
 
 int main()
 {
-    Set a;
+    SortedSet a;
+    a.add_elem(4);
+    a.add_elem(3);
+    a.add_elem(3);
+    a.add_elem(4);
     a.add_elem(2);
-    a.add_elem(3);
-    a.add_elem(3);
-    a.add_elem(4);
-    a.add_elem(4);
 
-    Set b;
-    b.add_elem(3);
-    b.add_elem(4);
+    SortedSet b;
     b.add_elem(5);
+    b.add_elem(4);
+    b.add_elem(3);
 
-    cout << a + b;
+    cout << a;
 
     return 0;
 }

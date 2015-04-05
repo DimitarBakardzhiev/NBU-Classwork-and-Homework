@@ -70,23 +70,6 @@ void Set::removeDuplicates()
     delete[] newArray;
 }
 
-ostream& operator<<(ostream& os, const Set& obj)
-{
-    os << "{";
-    for(int i = 0; i < obj.n; i++)
-    {
-        if(i != 0 && i < obj.n)
-        {
-            os << "\t";
-        }
-
-        os << obj.val[i];
-    }
-
-    os << "}";
-	return os;
-}
-
 bool Set::contains(int value) const
 {
     for (int i = 0; i < this->n; i++)

@@ -16,3 +16,27 @@
 1426981568 /home/rossoner40/workspace/OOP/19.03.2015/include/MultiSet.h
 	<iostream>
 
+1427679469 source:/home/mitko/workspace/NBU-Classwork-and-Homework/OOP/19.03.2015/src/MultiSet.cpp
+	"MultiSet.h"
+
+1427679469 /home/mitko/workspace/NBU-Classwork-and-Homework/OOP/19.03.2015/include/MultiSet.h
+	<iostream>
+
+1428249571 source:/home/mitko/workspace/NBU-Classwork-and-Homework/OOP/19.03.2015/src/Set.cpp
+	"Set.h"
+
+1428249571 /home/mitko/workspace/NBU-Classwork-and-Homework/OOP/19.03.2015/include/Set.h
+	<MultiSet.h>
+	<iostream>
+
+1428249763 source:/home/mitko/workspace/NBU-Classwork-and-Homework/OOP/19.03.2015/main.cpp
+	<iostream>
+	<Set.h>
+	<SortedSet.h>
+
+1428250165 source:/home/mitko/workspace/NBU-Classwork-and-Homework/OOP/19.03.2015/src/SortedSet.cpp
+	"SortedSet.h"
+
+1428250207 /home/mitko/workspace/NBU-Classwork-and-Homework/OOP/19.03.2015/include/SortedSet.h
+	<Set.h>
+

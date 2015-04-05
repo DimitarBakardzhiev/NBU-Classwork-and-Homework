@@ -8,7 +8,7 @@ using namespace std;
 
 class Set : public MultiSet
 {
-    protected:
+    private:
         void removeDuplicates();
         bool contains(int) const;
 
@@ -20,8 +20,6 @@ class Set : public MultiSet
         Set(const MultiSet&);
         void add_elem(int);
         Set operator+(const Set&) const;
-
-        friend ostream& operator<<(ostream&, const Set&);
 };
 
 #endif // SET_H
