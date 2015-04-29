@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1429362609 source:/home/mitko/workspace/NBU-Classwork-and-Homework/OOP/ErrorHandling/main.cpp
+	<iostream>
+	<RepeatedIn.h>
+	<IndexError.h>
+	<DblArr.h>
+	<stdlib.h>
+	<typeinfo>
+
+1429024663 /home/mitko/workspace/NBU-Classwork-and-Homework/OOP/ErrorHandling/include/RepeatedIn.h
+
+1429024703 source:/home/mitko/workspace/NBU-Classwork-and-Homework/OOP/ErrorHandling/src/RepeatedIn.cpp
+	"RepeatedIn.h"
+	<iostream>
+
+1429362352 source:/home/mitko/workspace/NBU-Classwork-and-Homework/OOP/ErrorHandling/src/DblArr.cpp
+	"DblArr.h"
+	<iostream>
+	<IndexError.h>
+	<assert.h>
+
+1429362513 /home/mitko/workspace/NBU-Classwork-and-Homework/OOP/ErrorHandling/include/DblArr.h
+	<iostream>
+
+1429362513 /home/mitko/workspace/NBU-Classwork-and-Homework/OOP/ErrorHandling/include/IndexError.h
+	<iostream>
+	<exception>
+
+1429030991 source:/home/mitko/workspace/NBU-Classwork-and-Homework/OOP/ErrorHandling/src/IndexError.cpp
+	"IndexError.h"
+	<exception>
+

@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1429182604 source:/home/mitko/workspace/NBU-Classwork-and-Homework/OOP/InheritancePolymorphism/main.cpp
+	<iostream>
+	<Building.h>
+	<Office.h>
+
+1429183290 source:/home/mitko/workspace/NBU-Classwork-and-Homework/OOP/InheritancePolymorphism/src/Building.cpp
+	"Building.h"
+	<iostream>
+
+1429183429 /home/mitko/workspace/NBU-Classwork-and-Homework/OOP/InheritancePolymorphism/include/Building.h
+	<string>
+
+1429183123 source:/home/mitko/workspace/NBU-Classwork-and-Homework/OOP/InheritancePolymorphism/src/Office.cpp
+	"Office.h"
+	<Building.h>
+	<iostream>
+
+1429183123 /home/mitko/workspace/NBU-Classwork-and-Homework/OOP/InheritancePolymorphism/include/Office.h
+	<Building.h>
+	<string>
+
+1429183196 source:/home/mitko/workspace/NBU-Classwork-and-Homework/OOP/InheritancePolymorphism/src/Hotel.cpp
+	"Hotel.h"
+
+1429183123 /home/mitko/workspace/NBU-Classwork-and-Homework/OOP/InheritancePolymorphism/include/Hotel.h
+	<Office.h>
+

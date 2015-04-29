@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1429788396 source:/home/mitko/workspace/NBU-Classwork-and-Homework/OOP/File-Input-Output/main.cpp
+	<iostream>
+	<exception>
+	<fstream>
+	<locale>
+
+1429785432 /home/mitko/workspace/NBU-Classwork-and-Homework/OOP/File-Input-Output/include/MyException.h
+	<exception>
+	<string>
+
+1429785439 source:/home/mitko/workspace/NBU-Classwork-and-Homework/OOP/File-Input-Output/src/MyException.cpp
+	"MyException.h"
+	<string>
+	<cstring>
+
