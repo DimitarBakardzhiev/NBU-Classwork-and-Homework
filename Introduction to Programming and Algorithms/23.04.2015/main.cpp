@@ -5,7 +5,7 @@ using namespace std;
 const int rows = 3;
 const int cols = 4;
 
-void gaussianMethod(double matrix[rows][cols])
+double* gaussianMethod(double matrix[rows][cols])
 {
     // the following code is used to every element on the main diagonal equal to 1
     // and every element under the main diagonal - equal to 0
@@ -34,7 +34,33 @@ void gaussianMethod(double matrix[rows][cols])
         }
     }
 
-    // TODO: calculate all roots
+    // calculate all roots
+    double roots[rows];
+    for (int i = rows - 1; i >= 0; i--)
+    {
+        // sum the left side -> ex.: 5 - 7 + 3x = 21 -> sum the known numbers from the left side
+        // the following code would sum 5 + (-7) in this example
+        double sum = 0;
+        // the following if statement prevents an error that could occur on the first iteration
+        // of the outer for loop
+        if (i == rows - 1)
+		{
+			roots[i] = matrix[i][cols - 1] / matrix[i][i];
+		}
+		else
+		{
+			for (int j = cols - 2; j > i; j--)
+			{
+				sum += matrix[i][j] * roots[j];
+			}
+
+			// to get the root we need to move the sum to the right side with the opposite sign
+			double rightSide = matrix[i][cols - 1] + (-sum);
+			roots[i] = rightSide / matrix[i][i];
+		}
+	}
+
+	return roots;
 }
 
 void printMatrix(double matrix[rows][cols])
@@ -59,7 +85,12 @@ int main()
         { -2, 1, 2, -3 }
     };
 
-    gaussianMethod(matrix);
+    double *roots = gaussianMethod(matrix);
     printMatrix(matrix);
+    for (int i = 0; i < cols - 1; i++)
+    {
+        cout << "x" << i + 1 << " = " << roots[i] << endl;
+    }
+
     return 0;
 }
