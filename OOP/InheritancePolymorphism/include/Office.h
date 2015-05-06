@@ -13,8 +13,8 @@ class Office : public Building
         int rooms;
 
     public:
-        Office(const string & name = "", const string &address = "", double area = 0.,
-                 double commonArea = 0., int floors = 0, int rooms = 0);
+        Office(const string & = "", const string & = "", double = 0.,
+                 double = 0., int = 0, int = 0);
         virtual ~Office();
 
         ostream& ins(ostream &) const;

@@ -35,7 +35,7 @@ double* gaussianMethod(double matrix[rows][cols])
     }
 
     // calculate all roots
-    double roots[rows];
+    double *roots = new double[rows];
     for (int i = rows - 1; i >= 0; i--)
     {
         // sum the left side -> ex.: 5 - 7 + 3x = 21 -> sum the known numbers from the left side
