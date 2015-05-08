@@ -26,3 +26,7 @@
 *.exe
 *.out
 *.app
+/OOP/Templates/build/
+/OOP/Templates/dist/
+/OOP/StreamsTest/build/
+/OOP/StreamsTest/dist/
