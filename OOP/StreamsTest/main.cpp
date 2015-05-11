@@ -9,6 +9,7 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <set>
 
 using namespace std;
 
@@ -85,7 +86,64 @@ int main() {
      * последният cout не работи
      */
     
+    // Задача 1
+    /*
+    string fileName;
+    do {
+        cout << "File name: ";
+        cin >> fileName;
+        
+        ifstream fileReader(fileName.c_str());
+        if (!fileReader) {
+            cerr << "File " << fileName << " failed to open!" << endl;
+            break;
+        }
 
+        // get symbols
+        fileReader.seekg(0, ios_base::end);
+        long position = fileReader.tellg();
+        long size = position == 0 ? (long)0 : position - (long)1;
+        cout << "Symbols: " << size << endl;
+        
+        // get words count
+        fileReader.seekg(0, ios_base::beg);
+        unsigned wordsCount = 0;
+        string word = "";
+        while (fileReader >> word) {
+            wordsCount++;
+        }
+        
+        cout << "Words: " << wordsCount << endl;
+        
+        // get lines count
+        unsigned linesCount = 0;
+        fileReader.seekg(0, ios_base::beg);
+        string line = "";
+        while (getline(fileReader, line)) {
+            linesCount++;
+            cout << line << endl;
+        }
+        
+        cout << "Lines: " << linesCount << endl;
+    } while (fileName != "");
+    */
+    
+    // Задача 2
+    cout << "Input keyword: ";
+    string keyword;
+    cin >> keyword;
+    
+    set<char> uniqueChars;
+    for (int i = 0, length = keyword.size(); i < length; i++) {
+        uniqueChars.insert(keyword[i]);
+    }
+    
+    for (set<char>::iterator it = uniqueChars.begin(); it != uniqueChars.end(); it++) {
+        cout << ' ' << *it;
+    }
+    
+    cout << endl;
+    
     return 0;
 }
 
