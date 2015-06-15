@@ -16,8 +16,10 @@ using namespace std;
 class Delivery : public Product {
 private:
     char deliveryName[31];
-    double price;
     unsigned count;
+    
+protected:
+    double price;
     
 public:
     Delivery(char[] = "", unsigned int = 0, double = 0., 

@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/Delivery.o \
+	${OBJECTDIR}/ExtendedDelivery.o \
 	${OBJECTDIR}/Product.o \
 	${OBJECTDIR}/Ristream.o \
 	${OBJECTDIR}/main.o
@@ -69,6 +70,11 @@ ${OBJECTDIR}/Delivery.o: Delivery.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Delivery.o Delivery.cpp
+
+${OBJECTDIR}/ExtendedDelivery.o: ExtendedDelivery.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ExtendedDelivery.o ExtendedDelivery.cpp
 
 ${OBJECTDIR}/Product.o: Product.cpp 
 	${MKDIR} -p ${OBJECTDIR}

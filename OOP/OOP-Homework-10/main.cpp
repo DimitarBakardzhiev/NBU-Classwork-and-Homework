@@ -10,7 +10,7 @@ using namespace std;
 int main() {
 
     int size = 6;
-    Employee *employees = new Employee[size];
+    Employee **employees = new Employee*[size];
     Ristream ri;
     
     unsigned id;
@@ -27,11 +27,11 @@ int main() {
         ri >> id >> age >> experience >> salary >> qualification >> name;
         if (i % 2 == 1) {
             ri >> department >> employeesCount;
-            employees[i] = Manager(id, string(name), age, experience, salary,
+            employees[i] = new Manager(id, string(name), age, experience, salary,
                     string(qualification), string(department), employeesCount);
         }
 
-        employees[i] = Employee(id, string(name), age, 
+        employees[i] = new Employee(id, string(name), age, 
                 experience, salary, string(qualification));
     }
     
@@ -52,7 +52,7 @@ int main() {
     }
     
     for (int i = 0; i < size; i++) {
-        binaryFileWriter.write((char*)&employees[i], sizeof(Employee));
+        binaryFileWriter.write((char*)employees[i], sizeof(employees[i]));
     }
     
     binaryFileWriter.close();
@@ -62,27 +62,14 @@ int main() {
         cerr << "Failed to open binary file!" << endl;
     }
 
-    Employee youngest, mostExperienced, highestPaid;
+    Employee *youngest, *mostExperienced, *highestPaid;
     for (int i = 0; i < size; i++) {
-        Employee currentEmployee;
-        binaryFileReader.read((char*)&currentEmployee, sizeof(Employee));
-        
-        if (i == 0) {
-            youngest = mostExperienced = highestPaid = currentEmployee;
-        } else {
-            if (currentEmployee.getAge() < youngest.getAge()) {
-                youngest = currentEmployee;
-            }
-
-            if (currentEmployee.getExpericence() > mostExperienced.getExpericence()) {
-                mostExperienced = currentEmployee;
-            }
-
-            if (currentEmployee.getSalary() > highestPaid.getSalary()) {
-                highestPaid = currentEmployee;
-            }
-        }
+        binaryFileReader.read((char*)employees[i], sizeof(employees[i]));
     }
+    
+    youngest = getYoungest(employees, size);
+    mostExperienced = getMostExperienced(employees, size);
+    highestPaid = getHighestPaid(employees, size);
     
     binaryFileReader.close();
     
@@ -92,11 +79,11 @@ int main() {
     }
 
     reportWriter << "Youngest employee: " << endl;
-    reportWriter << youngest << endl;
+    reportWriter << *youngest << endl;
     reportWriter << "Most experienced employee: " << endl;
-    reportWriter << mostExperienced << endl;
+    reportWriter << *mostExperienced << endl;
     reportWriter << "Highest paid employee: " << endl;
-    reportWriter << highestPaid << endl;
+    reportWriter << *highestPaid << endl;
     
     reportWriter.close();
     

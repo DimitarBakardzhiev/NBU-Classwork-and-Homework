@@ -9,13 +9,14 @@
 #include <iostream>
 #include <fstream>
 #include "Product.h"
+#include "Delivery.h"
 #include "Ristream.h"
 
 using namespace std;
 
 int main() {
 
-    Product products[5];
+    /*Product products[5];
     Ristream ri;
     unsigned id, w, h, l;
     double kg;
@@ -25,6 +26,8 @@ int main() {
         ri >> id >> w >> h >> l >> kg >> name;
         products[i] = Product(name, id, kg, h, w, l);
     }
+    */
+    
     /*
     ofstream fileWriter("products.txt");
     if (!fileWriter) {
@@ -58,7 +61,7 @@ int main() {
     }
      */
     
-    ofstream fileWriter("products.bin", ios::binary);
+    /*ofstream fileWriter("products.bin", ios::binary);
     if (!fileWriter) {
         cerr << "Failed to create binary file!" << endl;
         return 1;
@@ -87,7 +90,53 @@ int main() {
     }
     
     fileReader.close();
+    */
+    
+    const int size = 5;
+    Delivery **arr = new Delivery*[size];
+    Ristream rstream;
+    unsigned id, w, h, l;
+    double kg;
+    char name[21];
+    char deliveryName[31];
+    double price;
+    unsigned count;
+    
+    for (int i = 0; i < size; i++) {
+        rstream >> id >> w >> h >> l >> kg;
+        rstream >> name >> deliveryName >> price >> count;
+        
+        arr[i] = new Delivery(name, id, kg, h, w, l,
+                deliveryName, price, count);
+    }
+    
+    ofstream binaryFileWriter("Deliveries.bin", ios::binary);
+    if (!binaryFileWriter) {
+        cerr << "Failed to create binary file!" << endl;
+        return 1;
+    }
+    
+    binaryFileWriter.write((char*)&size, sizeof(int));
+    for (int i = 0; i < size; i++) {
+        binaryFileWriter.write((char*)arr[i], sizeof(Delivery));
+    }
+    
+    binaryFileWriter.close();
+    
+    ifstream binaryFileReader("Deliveries.bin", ios::binary);
+    if (!binaryFileReader) {
+        cerr << "Failed to open binary file!" << endl;
+    }
+
+    int len;
+    binaryFileReader.read((char*)&len, sizeof(int));
+    for (int i = 0; i < len; i++) {
+        binaryFileReader.read((char*)arr[i], sizeof(Delivery));
+        cout << endl << endl << "Delivery number: " << i + 1 << endl;
+        cout << *arr[i] << endl;
+    }
+    
+    binaryFileReader.close();
     
     return 0;
 }
-

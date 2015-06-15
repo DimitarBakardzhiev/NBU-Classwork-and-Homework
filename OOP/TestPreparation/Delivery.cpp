@@ -46,7 +46,8 @@ Delivery& Delivery::sale(int count) {
     if (this->count >= count) {
         this->count--;
     } else {
-        throw "Not enough products!";
+        this->count = 0;
+        cerr << "Not enough products!" << endl;
     }
     
     return *this;

@@ -9,6 +9,7 @@
 
 #include <iostream>
 #include <cstring>
+#include <iomanip>
 
 using namespace std;
 
@@ -20,7 +21,7 @@ Product::Product(char name[], unsigned int id, double kg,
 ostream& Product::inserter(ostream& out) const {
     out << "Product name: " << this->name << endl;
     out << "Id: " << this->id << endl;
-    out << "Weight: " << this->kg << endl;
+    out << "Weight: " << fixed << this->kg << endl;
     out << "Width: " << this->w << endl;
     out << "Height: " << this->h << endl;
     out << "Length: " << this->l;

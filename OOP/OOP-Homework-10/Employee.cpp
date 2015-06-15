@@ -47,3 +47,36 @@ unsigned Employee::getExpericence() const {
 double Employee::getSalary() const {
     this->salary;
 }
+
+Employee* getYoungest(Employee **arr, int count) {
+    Employee *youngest = arr[0];
+    for (int i = 1; i < count; i++) {
+        if (arr[i]->getAge() < youngest->getAge()) {
+            youngest = arr[i];
+        }
+    }
+    
+    return youngest;
+}
+
+Employee* getMostExperienced(Employee **arr, int count) {
+    Employee *mostExperienced = arr[0];
+    for (int i = 1; i < count; i++) {
+        if (arr[i]->getExpericence() > mostExperienced->getExpericence()) {
+            mostExperienced = arr[i];
+        }
+    }
+    
+    return mostExperienced;
+}
+
+Employee* getHighestPaid(Employee **arr, int count) {
+    Employee *highestPaid = arr[0];
+    for (int i = 1; i < count; i++) {
+        if (arr[i]->getSalary() > highestPaid->getSalary()) {
+            highestPaid = arr[i];
+        }
+    }
+    
+    return highestPaid;
+}

@@ -33,5 +33,9 @@ public:
 ostream& operator<<(ostream &os, Employee &obj);
 istream& operator>>(istream &is, Employee &obj);
 
+Employee* getYoungest(Employee **arr, int count);
+Employee* getMostExperienced(Employee **arr, int count);
+Employee* getHighestPaid(Employee **arr, int count);
+
 #endif
 
